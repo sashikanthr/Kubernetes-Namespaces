@@ -1,5 +1,7 @@
 ##Kubectl Commands
 
+Here is the cheatsheet for creating multiple development environments using namespaces in Kubernetes.
+
 ###Get Nodes
 ```	kubectl get nodes ```
 

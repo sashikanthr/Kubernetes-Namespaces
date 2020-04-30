@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-v2
+  namespace: development
+  labels:
+    app: my-webapp
+spec:
+  template:
+    metadata:
+      name: development-pod
+      labels:
+        app: my-webapp
+    spec:
+      containers:
+        - name: my-webapp-image
+          image: nicksteele/nodejs-docker-tutorial-v2
+          command: [ "node", "server.js" ]
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-webapp
